@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Dist::Zilla::App::Command::dhmakeperl;
 
 # PODNAME: Dist::Zilla::App::Command::dhmakeperl
@@ -9,14 +11,31 @@ package Dist::Zilla::App::Command::dhmakeperl;
 use Dist::Zilla::App -command;
 use autodie qw(:all);
 
-sub abstract { 'build debian package using dh-make-perl from your dzil package' }
+=method abstract
+
+=cut
+
+sub abstract { 'build debian package using dh-make-perl from your dzil package.
+    look for the deb file in ./debuild folder after running dzil dhmakeperl' }
+
+=method opt_spec
+
+=cut
 
 sub opt_spec{}
+
+=method validate_args
+
+=cut
 
 sub validate_args {
     my ($self, $opt, $args) = @_;
     die 'no args expected' if @$args;
 }
+
+=method execute
+
+=cut
 
 sub execute {
     my ($self, $opt, $args) = @_;

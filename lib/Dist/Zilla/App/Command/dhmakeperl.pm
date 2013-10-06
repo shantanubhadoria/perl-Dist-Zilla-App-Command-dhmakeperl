@@ -43,7 +43,8 @@ sub execute {
     system('rm -rf debuild');
     mkdir('debuild');
     $self->zilla->build_in('debuild/source');
-    system('dh-make-perl make --vcs none --build debuild/source');
+    system('dh-make-perl make --vcs none --build debuild/source --version ' .
+        $self->zilla->version);
 }
 1;
 
@@ -53,8 +54,27 @@ __END__
 
 = NOTES
 
-* You must have dh-make-perl installed on your system to use this command. use
-sudo apt-get install dh-make-perl to install it on debian and ubuntu
+* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=683533 If you have
+accidentally upgraded Makemaker you may apply this patch to fix the
+perllocal.pod error.
+    --- ./Debian/Debhelper/Buildsystem/makefile.pm  2012-05-19 17:26:26.000000000 +0200
+    +++ ./Debian/Debhelper/Buildsystem/makefile.pm.new      2012-08-01 15:53:41.000000000 +0200
+    @@ -100,9 +100,9 @@
+    
+     sub install {
+            my $this=shift;
+            my $destdir=shift;
+    -       $this->make_first_existing_target(['install'],
+    +       $this->make_first_existing_target(['pure_install', 'install'],
+                    "DESTDIR=$destdir",
+                    "AM_UPDATE_INFO_DIR=no", @_);
+     }
+* The .deb archive is created using code in your current repository. It does not
+use cpan2deb to pull CPAN code to create the .deb archive.
+* You must have dh-make-perl installed on your system to use this command. 
+* use sudo apt-get install dh-make-perl to install it on debian and ubuntu.
+* The .deb file will be created in the debuild folder, This should be added to
+your .gitignore file.
 
 =end wikidoc
 

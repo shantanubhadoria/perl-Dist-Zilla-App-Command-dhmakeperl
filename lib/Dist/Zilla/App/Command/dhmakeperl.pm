@@ -52,6 +52,26 @@ __END__
 
 =begin wikidoc
 
+= DESCRIPTION
+
+This is a extension for the L<Dist::Zilla> App that adds a command dhmakeperl to your dzil packagefor compiling your perl modules into .deb packages. 
+
+Before you install this package make sure that dh-make-perl is installed in your debian/ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
+    
+    sudo apt-get install dh-make-perl
+    sudo apt-get install apt-file
+    sudo apt-file update
+
+To make sure that your changelog and debian control file is included use plugins L<Dist::Zilla::Plugin::Control::Debian> and L<Dist::Zilla::Plugin::ChangelogFromGit::Debian> in your dist.ini
+
+= SYNOPSIS
+
+Once the package is installed and you have setup the prereqs, you can run the following command inside your package folder:
+    
+    dzil dhmakeperl
+
+Once this is done your package will be tested and deb file will be generated in the debuild folder for you.
+
 = NOTES
 
 * http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=683533 If you have

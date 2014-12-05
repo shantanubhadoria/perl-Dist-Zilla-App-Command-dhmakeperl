@@ -18,7 +18,7 @@ Once this is done your package will be tested and deb file will be generated in 
 
 =head1 DESCRIPTION
 
-This is a extension for the LE<lt>Dist::ZillaE<gt> App that adds a command dhmakeperl to your dzil packagefor compiling your perl modules into .deb packages. 
+This is a extension for the LE<lt>Dist::ZillaE<gt> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
 
 Before you install this package make sure that dh-make-perl is installed in your debianE<sol>ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
 
@@ -108,11 +108,21 @@ L<https://github.com/shantanubhadoria/dist-zilla-app-command-dhmakeperl>
 
 Shantanu Bhadoria <shantanu at cpan dott org>
 
-=head1 CONTRIBUTOR
+=head1 CONTRIBUTORS
 
-=for stopwords Shantanu
+=for stopwords Shantanu Bhadoria
+
+=over 4
+
+=item *
 
 Shantanu <shantanu@cpan.org>
+
+=item *
+
+Shantanu Bhadoria <shantanu@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -54,7 +54,7 @@ __END__
 
 = DESCRIPTION
 
-This is a extension for the L<Dist::Zilla> App that adds a command dhmakeperl to your dzil packagefor compiling your perl modules into .deb packages. 
+This is a extension for the L<Dist::Zilla> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
 
 Before you install this package make sure that dh-make-perl is installed in your debian/ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
     

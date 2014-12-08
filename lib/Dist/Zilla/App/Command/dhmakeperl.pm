@@ -54,7 +54,7 @@ __END__
 
 = DESCRIPTION
 
-This is a extension for the L<Dist::Zilla> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
+This is a extension for the [Dist::Zilla] App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
 
 Before you install this package make sure that dh-make-perl is installed in your debian/ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
     
@@ -62,7 +62,7 @@ Before you install this package make sure that dh-make-perl is installed in your
     sudo apt-get install apt-file
     sudo apt-file update
 
-To make sure that your changelog and debian control file is included use plugins L<Dist::Zilla::Plugin::Control::Debian> and L<Dist::Zilla::Plugin::ChangelogFromGit::Debian> in your dist.ini
+To make sure that your changelog and debian control file is included use plugins [Dist::Zilla::Plugin::Control::Debian] and [Dist::Zilla::Plugin::ChangelogFromGit::Debian] in your dist.ini
 
 = SYNOPSIS
 
@@ -74,7 +74,7 @@ Once this is done your package will be tested and deb file will be generated in 
 
 = NOTES
 
-* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=683533 If you have
+* [http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=683533] If you have
 accidentally upgraded Makemaker you may apply this patch to fix the
 perllocal.pod error.
     --- ./Debian/Debhelper/Buildsystem/makefile.pm  2012-05-19 17:26:26.000000000 +0200

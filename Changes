@@ -1,6 +1,9 @@
 Changelog for Dist-Zilla-App-Command-dhmakeperl
 
-0.003 2014-12-05T07:05:27
+0.004 2014-12-08T03:22:05
+ - No changes found
+
+0.003 2014-12-05T07:05:27Z
  - rebuilt pod and changes files (Shantanu Bhadoria)
  - Fixed a spelling mistake in the pod (Shantanu Bhadoria)
  - Added some more documentation (Shantanu Bhadoria)

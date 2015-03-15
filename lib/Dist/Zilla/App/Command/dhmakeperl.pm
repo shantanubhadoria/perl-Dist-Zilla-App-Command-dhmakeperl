@@ -8,6 +8,7 @@ package Dist::Zilla::App::Command::dhmakeperl;
 # VERSION
 
 # Dependencies
+use DhMakePerl;
 use Dist::Zilla::App -command;
 use autodie qw(:all);
 

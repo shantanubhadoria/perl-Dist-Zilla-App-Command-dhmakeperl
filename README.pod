@@ -6,7 +6,7 @@ Dist::Zilla::App::Command::dhmakeperl - use dh-make-perl to generate .deb archiv
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 SYNOPSIS
 
@@ -106,7 +106,7 @@ L<https://github.com/shantanubhadoria/perl-dist-zilla-app-command-dhmakeperl>
 
 =head1 AUTHOR
 
-Shantanu Bhadoria <shantanu at cpan dott org>
+Shantanu Bhadoria <shantanu@cpan.org> L<https://www.shantanubhadoria.com>
 
 =head1 CONTRIBUTORS
 
